@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker exec -it pubmed_knowledge_graph_db sh -c 'mysql -uroot pubmed_knowledge_graph_dev'
