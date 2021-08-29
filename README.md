@@ -1,6 +1,7 @@
 # PubMed Knowledge Graph, dockerized
 
 Paper: [Building a PubMed knowledge graph](https://www.nature.com/articles/s41597-020-0543-2)
+
 Dataset: http://er.tacc.utexas.edu/datasets/ped
 
 ## Getting started
