@@ -1,4 +1,0 @@
-#!/bin/sh
-
-docker build . --tag pubmed_knowledge_graph_db:latest
-docker run --detach -p 3306 --name pubmed_knowledge_graph_db pubmed_knowledge_graph_db:latest
