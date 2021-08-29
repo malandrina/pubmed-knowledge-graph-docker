@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# "Main" PubMed Knowledge Graph tables, per https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/1-PKG2020S4%20(1781-Dec.%202020)%20Features.pdf
+declare -a urls=(
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_A01_Articles.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_A02_AuthorList.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_B08_ORCID_Education.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_B09_ORCID_Employment.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_B10_BERN_Main.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_B12_BERN_Mutation.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_B14_Scimago.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_C03_Affiliation_merge.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_C04_ReferenceList.sql.gz"
+  "https://web.corral.tacc.utexas.edu/dive_datasets/PKG2020S4/PKG2020S4_MySQL/PKG2020S4_C05_NIH_PubMed.sql.gz"
+)
+
+mkdir data
+
+cd data
+
+for url in "${urls[@]}"; do
+  wget "$url"
+done
+
+cd ../
