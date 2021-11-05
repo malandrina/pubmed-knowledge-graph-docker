@@ -51,6 +51,8 @@ _Average row length_, _index length_, and _data length_ were determined by query
 % docker build . --tag pubmed_knowledge_graph_db:latest
 ```
 
+Note that the data import process is part of the build process and it takes about 44 hours to import the data.
+
 4. Run a Docker container using the image built in step 3:
 
 ```bash
