@@ -44,19 +44,21 @@ _Average row length_, _index length_, and _data length_ were determined by query
 
 0. Install Docker: https://docs.docker.com/engine/install
 1. Clone or fork this repo and `cd` to the root directory
-2. Download the PubMed Knowledge Graph dataset by running `script/download`
+2. Download the PubMed Knowledge Graph dataset by running `script/download` (expected execution time is roughly 4 hours)
 3. Build the Docker image:
 
 ```bash
 % docker build . --tag pubmed_knowledge_graph_db:latest
 ```
 
-Note that the data import process is part of the build process and it takes about 44 hours to import the data.
+The build process takes about 7 minutes
 
 4. Run a Docker container using the image built in step 3:
 
 ```bash
 % docker run -p 3306 --name pubmed_knowledge_graph_db  pubmed_knowledge_graph_db:latest
 ```
+
+Note that the data import process is part of the database setup process and it takes about 44 hours to import the data.
 
 5. Run a MySQL console to explore the data: `script/mysql-console`
